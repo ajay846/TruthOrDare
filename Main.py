@@ -61,6 +61,20 @@ def main():
                     sleep(2)
                     clear()
                     dict_players = (player1.capitalize(), player2.capitalize())
+                    if os.path.isfile("p_names.txt") == True:
+                        f = open("p_names.txt",'w')
+                        f.write("Player One Name: ")
+                        f.write(player1)
+                        f.write(" ; ")
+                        f.write("Player Two Name: ")
+                        f.write(player2)
+                    elif os.path.isfile("p_names.txt") == False:
+                        f = open("p_names.txt",'x')
+                        f.write("Player One Name: ")
+                        f.write(player1)
+                        f.write(" ; ")
+                        f.write("Player Two Name: ")
+                        f.write(player2)
 
             elif players == '3':
                 player1 = input("Player 1st Name: ")
@@ -92,6 +106,24 @@ def main():
                     sleep(2)
                     clear()
                     dict_players = (player1.capitalize(), player2.capitalize(), player3.capitalize())
+                    if os.path.isfile("p_names.txt") == True:
+                        f = open("p_names.txt",'w')
+                        f.write("Player One Name: ")
+                        f.write(player1)
+                        f.write(" ; ")
+                        f.write("Player Two Name: ")
+                        f.write(player2)
+                        f.write("Player Three Name: ")
+                        f.write(player3)
+                    elif os.path.isfile("p_names.txt") == False:
+                        f = open("p_names.txt",'x')
+                        f.write("Player One Name: ")
+                        f.write(player1)
+                        f.write(" ; ")
+                        f.write("Player Two Name: ")
+                        f.write(player2)
+                        f.write("Player Three Name: ")
+                        f.write(player3)
             elif players == '4':
                 player1 = input("Player 1st Name: ")
                 print("Storing name for rest of the game")
@@ -129,6 +161,28 @@ def main():
                     sleep(2)
                     clear()
                     dict_players = (player1.capitalize(), player2.capitalize(), player3.capitalize(), player4.capitalize())
+                    if os.path.isfile("p_names.txt") == True:
+                        f = open("p_names.txt",'w')
+                        f.write("Player One Name: ")
+                        f.write(player1)
+                        f.write(" ; ")
+                        f.write("Player Two Name: ")
+                        f.write(player2)
+                        f.write("Player Three Name: ")
+                        f.write(player3)
+                        f.write("Player Four Name: ")
+                        f.write(player4)
+                    elif os.path.isfile("p_names.txt") == False:
+                        f = open("p_names.txt",'x')
+                        f.write("Player One Name: ")
+                        f.write(player1)
+                        f.write(" ; ")
+                        f.write("Player Two Name: ")
+                        f.write(player2)
+                        f.write("Player Three Name: ")
+                        f.write(player3)
+                        f.write("Player Four Name: ")
+                        f.write(player4)
             elif players >= '5' or players <= '1':
                 excess()
                 sleep(2)
@@ -157,9 +211,25 @@ def main():
             ask()
             try:
                 def truth():
+                    if os.path.isfile("p_names.txt") == True:
+                        f = open("p_names.txt",'w')
+                        f.write("\n")
+                        f.write(player_select+" choose TRUTH")
+                    else os.path.isfile("p_names.txt") == False:
+                        f = open("p_names.txt",'x')
+                        f.write("\n")
+                        f.write(player_select+" choose TRUTH")
                     print("The question>> "+random.choice(t))
 
                 def dares():
+                    if os.path.isfile("p_names.txt") == True:
+                        f = open("p_names.txt",'w')
+                        f.write("\n")
+                        f.write(player_select+" choose DARE")
+                    else os.path.isfile("p_names.txt") == False:
+                        f = open("p_names.txt",'x')
+                        f.write("\n")
+                        f.write(player_select+" choose DARE")
                     print("The dare>> "+random.choice(d))
 
                 if  user_choice == 't' or user_choice == 'T':
